@@ -13,6 +13,8 @@ java {
 
 repositories {
     mavenCentral()
+    maven {url 'https://repo.spring.io/snapshot'} //스냅샷 저장소 추가
+    maven {url 'https://repo.spring.io/milestone'}
 }
 
 dependencies {
@@ -45,6 +47,10 @@ dependencies {
     implementation 'com.github.mwiede:jsch:0.2.16'
 
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+    //spring AI
+    implementation 'org.springframework.ai:spring-ai-openai-spring-boot-starter:1.0.0-SNAPSHOT'
+    implementation 'org.springframework.ai:spring-ai-openai'
 }
 
 tasks.named("test") {

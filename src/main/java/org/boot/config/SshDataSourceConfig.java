@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 import java.sql.*;
 
 @Slf4j
-@Configuration
+//@Configuration
 @RequiredArgsConstructor
 public class SshDataSourceConfig {
     private final SshTunnelingInitializer initializer;

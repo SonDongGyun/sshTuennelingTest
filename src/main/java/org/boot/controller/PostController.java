@@ -30,13 +30,8 @@ public class PostController {
 
     @GetMapping("/test")
     public ModelAndView test(HttpServletRequest request) throws Exception {
+        System.out.println(33333333);
         ModelAndView modelAndView = new ModelAndView();
-        PostModel postModel = new PostModel();
-        postModel.setPostUuid(request.getParameter("uuid"));
-        System.out.println(11111);
-        System.out.println(request.getParameter("uuid"));
-        PostModel postInfo = postService.postInfo(postModel);
-        System.out.println(postInfo.getPostUuid());
         modelAndView.setViewName("post/test");
         return modelAndView;
     }
